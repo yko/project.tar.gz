@@ -1270,6 +1270,7 @@ if !exists("*<SID>DoToggleProject()") "<<<
     function! s:DoToggleProject()
         if !exists('g:proj_running') || bufwinnr(g:proj_running) == -1
             Project
+            set winfixwidth
         else
             let g:proj_mywindow = winnr()
             Project
